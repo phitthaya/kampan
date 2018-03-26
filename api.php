@@ -16,7 +16,7 @@ if (strpos($_msg, 'สอนกำปั้น') !== false) {
   if (strpos($_msg, 'สอนกำปั้น') !== false) {
     $x_tra = str_replace("สอนกำปั้น","", $_msg);
     $pieces = explode("=", $x_tra);
-    $_question=str_replace("","",$pieces[0]);
+    $_question=str_replace("-","",$pieces[0]);
     $_answer=str_replace("","",$pieces[1]);
     //Post New Data
     $newData = json_encode(
@@ -51,7 +51,7 @@ if (strpos($_msg, 'สอนกำปั้น') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'ตะเองเค้าไม่รู้คำตอบอ่ะ ตัวเองสอนให้เค้าได้นะเพียงพิมพ์: สอน กำปั้น[คำถาม=คำตอบ] พิมพ์ให้ถูกต้องนะตัวเอง';
+    $arrPostData['messages'][0]['text'] = 'ตะเองเค้าไม่รู้คำตอบอ่ะ ตัวเองสอนให้เค้าได้นะเพียงพิมพ์: สอนกำปั้น-คำถามของคุณ=คำตอบของคุณ พิมพ์ให้ถูกต้องนะตัวเอง';
   }
 }
 $channel = curl_init();
