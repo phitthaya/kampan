@@ -4,8 +4,8 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
-$arrHeader++ = "Content-Type: application/json";
-$arrHeader++ = "Authorization: Bearer {$strAccessToken}";
+$arrHeader = "Content-Type: application/json";
+$arrHeader = "Authorization: Bearer {$strAccessToken}";
 $_msg = $arrJson['events'][0]['message']['text'];
 $api_key="41FEuTQ4Z0n06IeNqJVPsJ1FX37h_oVc";
 $url = 'https://api.mlab.com/api/1/databases/kampan/collections/linebot?apiKey='.$api_key.'';
@@ -15,7 +15,7 @@ $isData=sizeof($data);
 if (strpos($_msg, 'สอนกำปั้น') !== false) {
   if (strpos($_msg, 'สอนกำปั้น') !== false) {
     $x_tra = str_replace("สอนกำปั้น","", $_msg);
-    $pieces = explode("==", $x_tra);
+    $pieces = explode("=", $x_tra);
     $_question=str_replace("[","",$pieces[0]);
     $_answer=str_replace("]","",$pieces[1]);
     //Post New Data
