@@ -16,8 +16,8 @@ if (strpos($_msg, 'สอนกำปั้น') !== false) {
   if (strpos($_msg, 'สอนกำปั้น') !== false) {
     $x_tra = str_replace("สอนกำปั้น","", $_msg);
     $pieces = explode("=", $x_tra);
-    $_question=str_replace("[","",$pieces[0]);
-    $_answer=str_replace("]","",$pieces[1]);
+    $_question=str_replace("","",$pieces[0]);
+    $_answer=str_replace("","",$pieces[1]);
     //Post New Data
     $newData = json_encode(
       array(
