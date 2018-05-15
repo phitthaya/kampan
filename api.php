@@ -1,5 +1,5 @@
 <?php
-$strAccessToken = "r8MValWUMQGlcNpkeLI+wkdxqolwMJB9bg9PSuczPadjXnXYkYn5P/391zXLh11DeE8yYHe0NZXTvSMvjmQXxYwJLVXH0gIKND3rqwY6tePWiIOxMpa+zRDswVljxqL5l3mbkJpJcCpzCS/s7D/zCwdB04t89/1O/w1cDnyilFU=";
+$strAccessToken = "AlcTu79Llq0dSAwi6uwsaFpDny7cpabv+VRYNoURIsVNd7pa5Y8PikZ7qkL/7KZVeE8yYHe0NZXTvSMvjmQXxYwJLVXH0gIKND3rqwY6teNCdvAeSDdDSp8u/gcI6kWRxj3UwktNpgKf/v5Jys91vAdB04t89/1O/w1cDnyilFU=";
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 $strUrl = "https://api.line.me/v2/bot/message/reply";
